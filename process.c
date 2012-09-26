@@ -393,6 +393,7 @@ static inline void play_dead(void)
 void enter_idle(void)
 {
 	this_cpu_write(is_idle, 1);
+        printk(" Hello World! su\n");
 	atomic_notifier_call_chain(&idle_notifier, IDLE_START, NULL);
 }
 
